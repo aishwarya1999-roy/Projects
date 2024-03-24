@@ -21,7 +21,7 @@ from All.views import *
 
 urlpatterns = [
     path('', Home, name = "Home"),
-    path('recipes/', recipes, name = "recipes"),\
+    path('recipes/', recipes, name = "recipes"),
     path('base/', base, name = "base"),
     path('admin/', admin.site.urls),
 ]
