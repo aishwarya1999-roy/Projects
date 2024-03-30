@@ -9,7 +9,7 @@ def base(request):
 def recipe(request):
     if request.method =="POST":
         data = request.POST
-        
+        print(data)
         recipe_name = data.get('recipe_name')
         recipe_description = data.get('recipe_description')
 
