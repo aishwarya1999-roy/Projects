@@ -8,8 +8,7 @@ def home(request):
         recipe_description = data.get('recipe_description')
 
         print(recipe_description)
-        print(recipe_name
-              )
+        print(recipe_name)
     return render(request, 'home.html')
 
 def base(request):
