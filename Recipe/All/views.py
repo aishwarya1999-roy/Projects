@@ -9,6 +9,8 @@ def home(request):
 
         print(recipe_description)
         print(recipe_name)
+
+        
     return render(request, 'home.html')
 
 def base(request):
