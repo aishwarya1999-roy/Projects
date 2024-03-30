@@ -6,5 +6,5 @@ def home(request):
 def base(request):
     return render(request, 'base.html')
 
-def base(request):
-    return render(request, 'base.html')
+def recipes(request):
+    return render(request, 'recipe.html')
