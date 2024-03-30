@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+{% block start%}
+
+<div class="container hero-section">
+    <div class="d-flex justify-content-between">
+        <div class = "d-flex hero-text align-items-center">
+            <div> 
+                <h2>Welcome to our unique cooking haven!</h2>
+                <span> Dive into a world where flavors dance, ingredients sing, and creativity knows no bounds. Whether you're a seasoned chef or a kitchen novice, our unique cooking website is your passport to gastronomic adventure. Get ready to explore tantalizing recipes, ingenious cooking hacks, and a community passionate about all things food. Let's embark on this delicious journey together!</span>
+                <div><button class="btn">Join us in our Journey</button></div>
+            </div>
+            
+        </div>
+        
+
+        <div class = "hero-img">
+            <img src="{% static 'All/pic1.svg' %}" alt="Image" style="height: 500px; width: 500px;"/>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container content-body">
+    <h1>Our Feature Product</h1>
+    <div class="p-3 m-0 border-0 content position-relative">
+        <img src="{% static 'All/Pic2.png' %}" class="z-3 position-absolute" alt="Image" style="height: 400px; width: 400px;"/>
+        <img src="{% static 'All/Pic3.png' %}" class="z-2 position-absolute" alt="Image" style="height: 400px; width: 400px;"/>
+        <img src="{% static 'All/Pic9.png' %}" class="z-1 position-absolute" alt="Image" style="height: 400px; width: 400px;"/>
+    </div>
+</div>
+
+{% endblock %}
