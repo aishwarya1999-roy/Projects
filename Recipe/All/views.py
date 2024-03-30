@@ -5,7 +5,7 @@ def home(request):
         data = request.POST
         
         recipe_name = data.get('recipe_name')
-        recipe_name = data.get('recipe_name')
+        recipe_description = data.get('recipe_name')
     return render(request, 'home.html')
 
 def base(request):
