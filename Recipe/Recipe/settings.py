@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 ]
 
 EXTERNAL_APPS = [
-    'Home',
     'All'
 ]
 
