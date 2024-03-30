@@ -15,4 +15,5 @@ def recipe(request):
 
         print(recipe_description)
         print(recipe_name)
+        print(recipe_imagee)
     return render(request, 'recipe.html')
