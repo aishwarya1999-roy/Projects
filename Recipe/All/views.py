@@ -6,6 +6,10 @@ def home(request):
         
         recipe_name = data.get('recipe_name')
         recipe_description = data.get('recipe_description')
+
+        print(recipe_description)
+        print(recipe_name
+              )
     return render(request, 'home.html')
 
 def base(request):
