@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    data = request.POST()
+    data = request.POST
     print(data)
     return render(request, 'home.html')
 
