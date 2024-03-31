@@ -39,7 +39,7 @@ def update_recipe(request, id):
     queryset = Recipe.objects.get(id= id)
 
     if request.method =="POST":
-       form = RecipeForm(request.POST, instance=item)
+        form = RecipeForm(request.POST, instance=item)
         if form.is_valid():
             form.save()
             return redirect("/recipe/")
