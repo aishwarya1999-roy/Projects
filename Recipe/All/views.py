@@ -50,4 +50,4 @@ def update_recipe(request, id):
         queryset.save()
         return redirect("/recipe/")
     context = {'recipe' : queryset}
-    return render(request, 'update_recipe.html', context)
+    return render(request, 'recipe.html', context)
