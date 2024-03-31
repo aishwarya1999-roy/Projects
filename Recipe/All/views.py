@@ -13,7 +13,5 @@ def recipe(request):
         recipe_name = data.get('recipe_name')
         recipe_description = data.get('recipe_description')
 
-        print(recipe_description)
-        print(recipe_name)
-        print(recipe_image)
+        
     return render(request, 'recipe.html')
