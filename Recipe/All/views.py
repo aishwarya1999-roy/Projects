@@ -30,4 +30,4 @@ def recipe(request):
 
 def delete_recipe(request, id):
     print(id)
-    return HttpResponse
+    return HttpResponse("A")
