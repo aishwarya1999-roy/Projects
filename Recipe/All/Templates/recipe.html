@@ -29,8 +29,8 @@
         {% for recipe in recipes %}
         <tr>
           <th scope="row">{{forloop.counter}}</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>{{recipe_name}}</td>
+          <td>{{recipe_description}}</td>
           <td>@mdo</td>
         </tr>
        {% endfor %}
