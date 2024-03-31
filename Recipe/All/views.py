@@ -20,6 +20,6 @@ def recipe(request):
             recipe_description = recipe_description,
         )
 
-    return redirect("/recipe/")
+        return redirect("/recipe/")
         
     return render(request, 'recipe.html')
