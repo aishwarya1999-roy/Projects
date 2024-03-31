@@ -27,6 +27,6 @@ def recipe(request):
     return render(request, 'recipe.html', context)
 
 
-def delete_recipe(request.id):
+def delete_recipe(request, id):
  
     return redirect("/recipe/")
