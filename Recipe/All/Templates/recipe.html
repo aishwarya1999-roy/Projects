@@ -29,7 +29,7 @@
           <td>{{recipe.recipe_name}}</td>
           <td>{{recipe.recipe_description}}</td>
           <td>
-            <a href="#" class="btn btn-danger"> Delete </a>
+            <a href="/delete_recipe/{{ recipe.id}}" class="btn btn-danger"> Delete </a>
           </td>
         </tr>
        {% endfor %}
