@@ -31,5 +31,4 @@ def recipe(request):
 def delete_recipe(request, id):
     queryset = Recipe.objects.get(id= id)
     queryset.delete()
-    return HttpResponse("A")
-return redirect("/recipe/")
+    return redirect("/recipe/")
