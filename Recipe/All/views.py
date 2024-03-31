@@ -27,8 +27,8 @@ def recipe(request):
     queryset = Recipe.objects.all()
 
     if request.GET.get('search'):
-        queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
-
+        #queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
+        print(request.GET.get('search'))
 
     context = {'recipes' : queryset}
     return render(request, 'recipe.html', context)
