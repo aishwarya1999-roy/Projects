@@ -44,5 +44,5 @@ def update_recipe(request, id):
             form.save()
             return redirect("/recipe/")
     else:
-        form = YourModelForm(instance=item)
+        form = RecipeForm(instance=item)
     return render(request, 'update_item.html', {'form': form})
