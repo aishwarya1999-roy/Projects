@@ -44,7 +44,8 @@ def update_recipe(request, id):
 
         queryset.recipe_name = recipe_name
         queryset.recipe_description = recipe_description
-        queryset.recipe_image = recipe_image
+        if recipe_image:
+            queryset.recipe_image = recipe_image
 
 
     context = {'recipe' : queryset}
