@@ -48,6 +48,5 @@ def update_recipe(request, id):
             queryset.recipe_image = recipe_image
 
         queryset.save()
-        return redirect("/recipe/")
-    context = {'recipe' : queryset}
-    return render(request, 'recipe.html', context)
+        return JsonResponse({'success': True})
+return JsonResponse({'success': False})
