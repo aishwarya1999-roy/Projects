@@ -19,7 +19,6 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Image</th>
           <th scope="col">Title</th>
           <th scope="col">Description</th>
@@ -28,7 +27,6 @@
       <tbody>
         {% for recipe in recipes %}
         <tr>
-          <th scope="row">{{forloop.counter}}</th>
           <td>{{recipe.recipe_image}}</td>
           <td>{{recipe.recipe_name}}</td>
           <td>{{recipe.recipe_description}}</td>
