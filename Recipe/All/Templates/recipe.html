@@ -27,9 +27,9 @@
       <tbody>
         {% for recipe in recipes %}
         <tr>
-          <td>{{recipe.recipe_image}}</td>
+          <td><img src="/media/{{recipe.recipe_image}}"> </td>
           <td>{{recipe.recipe_name}}</td>
-          <td><img src="/media/{{recipe.recipe_description}}" ></img> </td>
+          <td>{{recipe.recipe_description}}</td>
         </tr>
        {% endfor %}
       </tbody>
