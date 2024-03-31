@@ -49,4 +49,4 @@ def update_recipe(request, id):
 
         queryset.save()
         return JsonResponse({'success': True})
-return JsonResponse({'success': False})
+    return JsonResponse({'success': False})
