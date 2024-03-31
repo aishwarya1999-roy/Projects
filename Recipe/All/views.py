@@ -29,4 +29,4 @@ def recipe(request):
 
 def delete_recipe(request.id):
  
- return redirect("/recipe/")
+return redirect("/recipe/")
