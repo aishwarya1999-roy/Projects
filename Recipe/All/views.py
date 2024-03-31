@@ -35,5 +35,14 @@ def delete_recipe(request, id):
 
 def update_recipe(request, id):
     queryset = Recipe.objects.get(id= id)
+
+    if request.method =="POST":
+        data = request.POST
+        recipe_image = request.FILES.get('recipe_image')
+        recipe_name = data.get('recipe_name')
+        recipe_description = data.get('recipe_description')
+
+
+
     context = {'recipe' : queryset}
     return render(request, 'update_recipe.html', context)
