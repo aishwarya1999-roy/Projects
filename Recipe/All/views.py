@@ -28,5 +28,5 @@ def recipe(request):
 
 
 def delete_recipe(request, id):
- 
+    print(id)
     return redirect("/recipe/")
