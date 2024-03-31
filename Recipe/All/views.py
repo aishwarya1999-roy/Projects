@@ -47,7 +47,7 @@ def update_recipe(request, id):
         if recipe_image:
             queryset.recipe_image = recipe_image
 
-        queryset.save
+        queryset.save()
 
     context = {'recipe' : queryset}
     return render(request, 'update_recipe.html', context)
