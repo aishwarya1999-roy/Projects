@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 
 def home(request):
@@ -19,5 +19,7 @@ def recipe(request):
             recipe_name = recipe_name,
             recipe_description = recipe_description,
         )
+
+    return redirect("")
         
     return render(request, 'recipe.html')
