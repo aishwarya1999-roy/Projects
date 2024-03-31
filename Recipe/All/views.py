@@ -3,6 +3,7 @@ from .models import *
 from django.http import HttpResponse
 from django.http import JsonResponse
 from .form import *
+
 def home(request):
     return render(request, 'home.html')
 
@@ -41,7 +42,7 @@ def update_recipe(request, id):
        form = RecipeForm(request.POST, instance=item)
         if form.is_valid():
             form.save()
-            return redirect('your_redirect_url')
+            return redirect("/recipe/")
     else:
         form = YourModelForm(instance=item)
     return render(request, 'update_item.html', {'form': form})
