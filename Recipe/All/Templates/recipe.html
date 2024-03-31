@@ -29,9 +29,9 @@
         {% for recipe in recipes %}
         <tr>
           <th scope="row">{{forloop.counter}}</th>
-          <td>{{recipe_name}}</td>
-          <td>{{recipe_description}}</td>
-          <td>{{recipe_image}}</td>
+          <td>{{recipe.recipe_name}}</td>
+          <td>{{recipe.recipe_description}}</td>
+          <td>{{recipe.recipe_image}}</td>
         </tr>
        {% endfor %}
       </tbody>
