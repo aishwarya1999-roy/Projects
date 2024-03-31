@@ -1,7 +1,7 @@
 from django import forms
-from .models import YourModel
+from .models import  Recipe
 
-class YourModelForm(forms.ModelForm):
+class  RecipelForm(forms.ModelForm):
     class Meta:
         model = YourModel
         fields = ['field1', 'field2']  # Add other fields as needed
