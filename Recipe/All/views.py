@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
+from django.http import request
 
 def home(request):
     return render(request, 'home.html')
@@ -29,4 +30,4 @@ def recipe(request):
 
 def delete_recipe(request, id):
     print(id)
-    return redirect("/recipe/")
+    return ht
