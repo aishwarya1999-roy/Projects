@@ -29,5 +29,5 @@ def recipe(request):
 
 
 def delete_recipe(request, id):
-    print(id)
+    queryset = Recipe.objects.get(id= id)
     return HttpResponse("A")
