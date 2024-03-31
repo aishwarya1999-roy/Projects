@@ -48,6 +48,6 @@ def update_recipe(request, id):
             queryset.recipe_image = recipe_image
 
         queryset.save()
-
+        return redirect("/recipe/")
     context = {'recipe' : queryset}
     return render(request, 'update_recipe.html', context)
