@@ -30,7 +30,7 @@
           <td>{{recipe.recipe_description}}</td>
           <td>
             <a href="/delete_recipe/{{recipe.id}}/" class="btn btn-danger"> <i class="bi bi-trash"></i> </a>
-            <button onclick="openModal('{{ item.id }}')" class="btn btn-success mt-2"  data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-pencil-square"></i> </a>
+            <a href="/update_recipe/{{recipe.id}}/" class="btn btn-success mt-2"><i class="bi bi-pencil-square"></i> </a>
           </td>
         </tr>
        {% endfor %}
@@ -70,36 +70,11 @@
     </div>
   </div>
 
+  
 
-  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Update Recipes</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
 
-        <div class="modal-body">
-          <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="exampleInputName" class="form-label">Recipe Name</label>
-                <input name="recipe_name" value="{{recipe.recipe_name}}" required type="text" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputdescription" class="form-label">Recipe Description</label>
-                <textarea  name="recipe_description" value=""class="form-control">{{recipe.recipe_description}} </textarea>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputdescription" class="form-label">Recipe Image</label>
-                <input name="recipe_image" value="{{recipe.recipe_image}}" type="file" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Save</button>
-        </form>
-        </div>
-      </div>
-    </div>
-</div>
+
+
 
 
 {% endblock %}
