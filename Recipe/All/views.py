@@ -27,4 +27,4 @@ def recipe(request):
 
 
         
-    return render(request, 'recipe.html')
+    return render(request, 'recipe.html', context)
