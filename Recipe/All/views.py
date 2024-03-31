@@ -24,7 +24,7 @@ def recipe(request):
     
     queryset = Recipe.objects.all()
     context = {'recipes' : queryset}
-
-
-        
     return render(request, 'recipe.html', context)
+
+
+def delete_recipe(request):
