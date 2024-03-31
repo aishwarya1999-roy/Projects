@@ -42,6 +42,9 @@ def update_recipe(request, id):
         recipe_name = data.get('recipe_name')
         recipe_description = data.get('recipe_description')
 
+        queryset.recipe_name = recipe_name
+        queryset.recipe_description = recipe_description
+
 
 
     context = {'recipe' : queryset}
