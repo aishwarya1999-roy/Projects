@@ -58,7 +58,7 @@ def update_recipe(request, id):
     return render(request, 'update_recipe.html', context)
 
 
-
+ 
 def login_page(request):
     data = request.POST
 
