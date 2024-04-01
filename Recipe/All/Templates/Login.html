@@ -3,9 +3,10 @@
 {% block start%}
 
 <div class="container mt-10 ">
-    <h2> Login </h2>
+    
     <form method="post" class="card col-6 mx-auto p-3 m-2" enctype="multipart/form-data">
     {% csrf_token %}
+    <h2> Login </h2>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="email" class="form-control">
