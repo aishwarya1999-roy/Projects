@@ -60,6 +60,8 @@ def update_recipe(request, id):
 
 
 def login_page(request):
+    data = request.POST
+
     return render(request, 'Login.html')
 
 def register_page(request):
