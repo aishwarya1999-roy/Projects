@@ -17,41 +17,39 @@
   </div>
    
   <hr>
-  <div class="d-flex flex-wrap ">
+  <div class="d-flex flex-wrap">
     {% for recipe in recipes %}
-    <a href="#" class="card-link text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#recipeModal">
-    <div class="card m-2" style="width: 250px;">
-      <img src="/media/{{recipe.recipe_image}}" class="card-img-top" style="height: 250px;">
-      <div class="card-body">
-        <h5 class="card-title">{{recipe.recipe_name}}</h5>
-        <p class="card-text"style=" height: 80px; overflow: hidden; text-overflow: ellipsis;">{{recipe.recipe_description}} </p>
-        <a href="/delete_recipe/{{recipe.id}}/" class="btn btn-danger mt-2"> <i class="bi bi-trash"></i> </a>
-        <a href="/update_recipe/{{recipe.id}}/" class="btn btn-success mt-2"><i class="bi bi-pencil-square"></i> </a>
+    <a href="#" class="card-link text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#recipeModal{{ recipe.id }}">
+      <div class="card m-2" style="width: 250px;">
+        <img src="/media/{{ recipe.recipe_image }}" class="card-img-top" style="height: 250px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+          <p class="card-text" style="height: 80px; overflow: hidden; text-overflow: ellipsis;">{{ recipe.recipe_description }}</p>
+          <a href="/delete_recipe/{{ recipe.id }}/" class="btn btn-danger mt-2"> <i class="bi bi-trash"></i> </a>
+          <a href="/update_recipe/{{ recipe.id }}/" class="btn btn-success mt-2"><i class="bi bi-pencil-square"></i> </a>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
     {% endfor %}
   </div>
-</div>
-
-{% for recipe in recipes %}
-<div class="modal fade" id="recipeModal{{ recipe.id }}" tabindex="-1" aria-labelledby="recipeModalLabel{{ recipe.id }}" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"  id="recipeModalLabel{{ recipe.id }}">Recipe Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       
-        <h5>{{recipe.recipe_name}}</h5>
-        <p>{{recipe.recipe_description}}</p>
-    
+  
+  {% for recipe in recipes %}
+  <div class="modal fade" id="recipeModal{{ recipe.id }}" tabindex="-1" aria-labelledby="recipeModalLabel{{ recipe.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="recipeModalLabel{{ recipe.id }}">Recipe Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>{{ recipe.recipe_name }}</h5>
+          <p>{{ recipe.recipe_description }}</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-{% endfor %}
+  {% endfor %}
+  
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
