@@ -30,6 +30,8 @@ def base(request):
         queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
     return render(request, 'base.html')
 
+
+
 @login_required(login_url="/login_page/")
 def recipe(request):
     if request.method =="POST":
