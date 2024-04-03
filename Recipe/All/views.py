@@ -80,7 +80,7 @@ def login_page(request):
             messages.error(request, "Invalid Password", extra_tags='danger')
             return redirect("/login_page/")
         else:
-            login(request, user)
+            login(request,user)
             return redirect("/")
 
 
@@ -113,3 +113,7 @@ def register_page(request):
         return redirect("/register_page/")
 
     return render(request, 'register.html')
+
+
+def logout_page(request):
+    return("/")
