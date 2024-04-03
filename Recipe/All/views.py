@@ -83,7 +83,7 @@ def login_page(request):
             return redirect("/s")
 
 
-    return render(request, 'Login.html')
+    return render(request, 'login.html')
 
 
 
