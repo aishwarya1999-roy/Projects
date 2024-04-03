@@ -12,7 +12,7 @@ def home(request):
 def base(request):
     return render(request, 'base.html')
 
-@login_required
+
 def recipe(request):
     if request.method =="POST":
         data = request.POST
