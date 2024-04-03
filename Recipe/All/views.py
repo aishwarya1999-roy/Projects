@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate , login
+
 
 def home(request):
     return render(request, 'home.html')
@@ -60,9 +64,51 @@ def update_recipe(request, id):
 
  
 def login_page(request):
-    data = request.POST
+    if request.method == "POST":
+        data = request.POST
+        username = data.get('username')
+        password = data.get('password')
+
+        if User.objects.filter(username = username).exists():
+            messages.error(request, "Invalid Username", extra_tags='danger')
+            return redirect("/login_page/")
+
+
+        user = authenticate(username = username, password = password)
+        if user== None:
+            messages.error(request, "Invalid Password", extra_tags='danger')
+            return redirect("/login_page/")
+        else:
+            login(user)
+            return redirect("/s")
+
 
     return render(request, 'Login.html')
 
+
+
 def register_page(request):
+    if request.method == "POST":
+        data = request.POST
+        first_name = data.get('first_name')
+        last_name = data.get('last_name')
+        username = data.get('username')
+        password = data.get('password')
+        
+        user = User.objects.filter(username = username)
+
+        if user.exists():
+            messages.error(request, "User Name Already Exist", extra_tags='danger')
+            return redirect("/register_page/")
+
+        user = User.objects.create(
+            first_name = first_name, 
+            last_name =  last_name, 
+            username =  username
+        )
+        user.set_password(password)
+        user.save()
+        messages.success(request, "Account Created Succesfully")
+        return redirect("/register_page/")
+
     return render(request, 'register.html')
