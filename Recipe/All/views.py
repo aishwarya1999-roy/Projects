@@ -11,7 +11,8 @@ def home(request):
 
 def base(request):
     if request.GET.get('search_home'):
-        queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
+        print(request.GET.get('search_home'))
+        #queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
     return render(request, 'base.html')
 
 
