@@ -10,11 +10,13 @@ def home(request):
     return render(request, 'home.html')
 
 def base(request):
-    if request.GET.get('search_home'):
-        print(request.GET.get('search_home'))
+   return render(request, 'base.html')
+   """ if request.GET.get('search_home'):
+        print(request.GET.get('search_home'))"""
         #queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
-    return render(request, 'base.html')
-
+    
+def search_page(request):
+    return render(request, 'search_page.html')
 
 
 @login_required(login_url="/login_page/")

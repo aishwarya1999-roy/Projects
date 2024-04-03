@@ -16,35 +16,40 @@
     </div>
   </div>
    
-
-    
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Image</th>
-          <th scope="col">Title</th>
-          <th scope="col">Description</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for recipe in recipes %}
-        <tr>
-          <td><img src="/media/{{recipe.recipe_image}}" style="height: 100px; width: 100px;"> </td>
-          <td>{{recipe.recipe_name}}</td>
-          <td>{{recipe.recipe_description}}</td>
-          <td>
-            <a href="/delete_recipe/{{recipe.id}}/" class="btn btn-danger"> <i class="bi bi-trash"></i> </a>
-            <a href="/update_recipe/{{recipe.id}}/" class="btn btn-success mt-2"><i class="bi bi-pencil-square"></i> </a>
-          </td>
-        </tr>
-       {% endfor %}
-      </tbody>
-    </table>
+  <hr>
+  <div class="d-flex flex-wrap ">
+    {% for recipe in recipes %}
+    <a href="#" class="card-link text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#recipeModal">
+    <div class="card m-2" style="width: 250px;">
+      <img src="/media/{{recipe.recipe_image}}" class="card-img-top" style="height: 250px;">
+      <div class="card-body">
+        <h5 class="card-title">{{recipe.recipe_name}}</h5>
+        <p class="card-text"style=" height: 80px; overflow: hidden; text-overflow: ellipsis;">{{recipe.recipe_description}} </p>
+        <a href="/delete_recipe/{{recipe.id}}/" class="btn btn-danger mt-2"> <i class="bi bi-trash"></i> </a>
+        <a href="/update_recipe/{{recipe.id}}/" class="btn btn-success mt-2"><i class="bi bi-pencil-square"></i> </a>
+      </div>
+    </div>
+  </a>
+    {% endfor %}
+  </div>
 </div>
 
-
+<div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recipeModalLabel">Recipe Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% for recipe in recipes %}
+        <h5>{{recipe.recipe_name}}</h5>
+        <p>{{recipe.recipe_description}}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
