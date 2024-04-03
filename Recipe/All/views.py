@@ -64,12 +64,13 @@ def update_recipe(request, id):
 
  
 def login_page(request):
+
     if request.method == "POST":
         data = request.POST
         username = data.get('username')
         password = data.get('password')
 
-        if User.objects.filter(username = username).exists():
+        if not User.objects.filter(username = username).exists():
             messages.error(request, "Invalid Username", extra_tags='danger')
             return redirect("/login_page/")
 
