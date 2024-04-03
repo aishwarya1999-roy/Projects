@@ -10,6 +10,8 @@ def home(request):
     return render(request, 'home.html')
 
 def base(request):
+    if request.GET.get('search'):
+        queryset= queryset.filter(recipe_name__icontains = request.GET.get('search'))
     return render(request, 'base.html')
 
 @login_required(login_url="/login_page/")
