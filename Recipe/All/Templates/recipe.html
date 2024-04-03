@@ -19,6 +19,7 @@
   <hr>
   <div class="d-flex flex-wrap justify-content-center">
     {% for recipe in recipes %}
+    <div class="col-lg-3 col-md-4 col-sm-6">
     <a href="#" class="card-link text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#recipeModal{{ recipe.id }}">
       <div class="card m-2" style="width: 250px;">
         <img src="/media/{{ recipe.recipe_image }}" class="card-img-top" style="height: 300px;">
@@ -30,6 +31,7 @@
         </div>
       </div>
     </a>
+    </div>
     {% endfor %}
   </div>
   
