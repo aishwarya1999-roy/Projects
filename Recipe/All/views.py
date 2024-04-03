@@ -81,7 +81,7 @@ def login_page(request):
             return redirect("/login_page/")
         else:
             login(user)
-            return redirect("/s")
+            return redirect("/")
 
 
     return render(request, 'login.html')
