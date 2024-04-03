@@ -23,7 +23,7 @@
       <div class="card m-2" style="width: 250px;">
         <img src="/media/{{ recipe.recipe_image }}" class="card-img-top" style="height: 250px;">
         <div class="card-body">
-          <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+          <h5 class="card-title" style=" text-transform: capitalize;">{{ recipe.recipe_name }}</h5>
           <p class="card-text" style="height: 80px; overflow: hidden; text-overflow: ellipsis;">{{ recipe.recipe_description }}</p>
           <a href="/delete_recipe/{{ recipe.id }}/" class="btn btn-danger mt-2"> <i class="bi bi-trash"></i> </a>
           <a href="/update_recipe/{{ recipe.id }}/" class="btn btn-success mt-2"><i class="bi bi-pencil-square"></i> </a>
