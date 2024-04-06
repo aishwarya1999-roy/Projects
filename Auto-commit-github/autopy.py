@@ -4,7 +4,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # Set the path to the folder you want to monitor
-folder_path = "." # it will select the correct folder 
+folder_path = "." # it will select the curent folder 
 
 
 class GitAutoCommitHandler(FileSystemEventHandler):
