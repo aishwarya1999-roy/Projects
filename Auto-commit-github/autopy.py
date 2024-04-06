@@ -21,7 +21,6 @@ class GitAutoCommitHandler(FileSystemEventHandler):
                 print(f"An error occurred: {e}")
             print()
 
-
 if __name__ == "__main__":
     event_handler = GitAutoCommitHandler()
     observer = Observer()
