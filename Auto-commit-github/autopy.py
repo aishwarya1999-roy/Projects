@@ -6,7 +6,6 @@ from watchdog.events import FileSystemEventHandler
 # Set the path to the folder you want to monitor
 folder_path = "." # it will select the curent folder 
 
-
 class GitAutoCommitHandler(FileSystemEventHandler):
     def on_any_event(self, event):
         if event.is_directory:
