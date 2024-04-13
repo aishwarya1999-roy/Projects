@@ -2,10 +2,10 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = 'django-insecure-h_31z__vu6v4#813%j%zfal_3@f9r)ptucv6p9xp97as@&opq$'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
