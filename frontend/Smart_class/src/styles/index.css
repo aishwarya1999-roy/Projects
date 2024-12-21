@@ -1,0 +1,22 @@
+
+/* src/index.css */
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+body{
+    background-color: rgba(241, 101, 37, 1) ;
+    background-image: url('../assets/svgs.png');
+    background-repeat: repeat;
+    background-size: 100% 300px;
+    /* background-position: center; */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 100% 150px; 
+        background-position: center;
+    }
+}
